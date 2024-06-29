@@ -2,16 +2,19 @@
 # MODO CALCULADORA
 
 # Variables y tipos de datos que usaremos como Constantes
-num = 42            # Entero
-pi = 3.14159        # Flotante
-pyname = "Python"     # Cadena de texto
-is_valid = True     # Booleano
+NUM = 42            # Entero
+PI = 3.14159        # Flotante
+PYNAME = "Python"     # Cadena de texto
+IS_VALID = True     # Booleano
 
 # Funciones
-def greet(name=pyname):
+def greet(name = PYNAME):
+    """Devuelve un saludo."""
     return f"Hola, {name}!"
+
 # Ejemplo práctico
 def calcular_operaciones(numero1, numero2):
+    """Hace cálculos con dos números dados."""
     suma = numero1 + numero2
     resta = numero1 - numero2
     multiplicacion = numero1 * numero2
@@ -19,15 +22,22 @@ def calcular_operaciones(numero1, numero2):
     
     return suma, resta, multiplicacion, division
 
-def dividir_a_pi(num=num):
-    
-    return(pi/num)
+# Devuelve flotante de PI y num
+def dividir_a_pi(num=NUM):
+    """Divide a PI entre el numero dado.
+       El numero dado es una constante definida al principio.
+       si se necesita se puede cambiar la ejecución con otro num.
+    """
+    return(PI/num)
+
+# Inicio de la ejecución
 
 num1 = float(input("Ingrese el primer número: "))
 num2 = float(input("Ingrese el segundo número: "))
 
 greet()
 resultados = calcular_operaciones(num1, num2)
+
 print(f"Suma: {resultados[0]}")
 print(f"Resta: {resultados[1]}")
 print(f"Multiplicación: {resultados[2]}")
