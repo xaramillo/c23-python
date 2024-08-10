@@ -30,7 +30,9 @@ def cadena_al_revés(nombre='Mundo'):
     """Devuelve una cadena escrita al revés"""
     cadena_invertida = ''
     for char in nombre:
+        print(char)
         cadena_invertida = char + cadena_invertida
+        print(cadena_invertida)
     return cadena_invertida
 
 def mayusculas(palabra):
